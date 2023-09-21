@@ -9,11 +9,16 @@ in a directory as org files.
 - Read [[https://developers.google.com/calendar/api/quickstart/java][Google's Java Quickstart]] then update the properties file with the fully qualified path to the json file downloaded as part of the guide.
 
 * Run
+
+NOTE: the first time you run the project, there will be an interactive step, where you must open a link and give the app
+access to your google calendar. Check the logs for this link.
+
 #+begin_src shell
 ./gradlew run
 #+end_src
 
 * Tell emacs about the output dir
+
 #+begin_src elisp
 (setq org-agenda-files (list "/path/to/org/agenda/directory/")
 #+end_src
