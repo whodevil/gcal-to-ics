@@ -11,6 +11,6 @@ dependencies {
 }
 
 application {
-    // Define the main class for the application.
-    mainClass.set("gcal.to.ics.app.AppKt")
+    mainClass.set("info.offthecob.calendar.MainKt")
+    applicationDefaultJvmArgs = listOf("-Dconfiguration.properties=${rootProject.projectDir}/configuration.properties")
 }
