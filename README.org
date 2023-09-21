@@ -1,1 +1,19 @@
-#+title: gcal to ics
+#+title: gcal to org-agenda
+
+This uses google's api to retrieve events from a private google calendar and land them
+in a directory as org files.
+
+* Pre-requisites
+
+- Make a copy of the ~example.configuration.properties~ file. By default the project looks for a file in this project dir named ~configuration.properties~.
+- Read [[https://developers.google.com/calendar/api/quickstart/java][Google's Java Quickstart]] then update the properties file with the fully qualified path to the json file downloaded as part of the guide.
+
+* Run
+#+begin_src shell
+./gradlew run
+#+end_src
+
+* Tell emacs about the output dir
+#+begin_src elisp
+(setq org-agenda-files (list "/path/to/org/agenda/directory/")
+#+end_src
